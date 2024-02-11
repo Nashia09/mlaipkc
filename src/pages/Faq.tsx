@@ -147,6 +147,8 @@ export const Faq = () => {
         </div>
       </div>
     </div>
+
+  
   </section>
   );
 };

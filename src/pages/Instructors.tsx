@@ -1,70 +1,105 @@
-// import React from 'react'
-
-// const Instructors = () => {
-//   return (
-//     <div>
-//       import React from "react";
-
-// const Team = () => {
-//   return (
-//     
-//   );
-// };
-
-// 
-
-
- import React from 'react'
+import React from "react";
 
 const Instructors = () => {
+  const person = [
+    {
+      id: 1,
+      Name: "Simon Agada",
+      rank: "Major",
+      img: "https://i.ibb.co/Wpz2jQ9/SO-agada.jpg",
+    },
+    {
+      id: 2,
+      Name: "Amba Ogbu",
+      rank: "Captain",
+      img: "https://i.ibb.co/ZL2C3sN/dy.jpg",
+    },
+    {
+      id: 3,
+      Name: "Stella Duru-Uzoma",
+      rank: "Major",
+      img: "https://ibb.co/8D6BNmk",
+    },
+    {
+      id: 4,
+      Name: "Saleh Musa",
+      rank: "Captain",
+      img: "https://ibb.co/8D6BNmk",
+    },
+    {
+      id: 5,
+      Name: "Muhammad Abubakar",
+      rank: "Captain",
+      img: "https://ibb.co/8D6BNmk",
+    },
+  ];
+
+  // const data =[
+  // "https://ibb.co/8D6BNmk",
+  // "https://ibb.co/tYz0KYX",
+  // "https://ibb.co/2jv45pB",
+  // "https://ibb.co/XYy1pcG",
+  // "https://ibb.co/x6WM5NX",
+  // "https://ibb.co/Q9Bm4Bh",
+  // "https://ibb.co/23jznSg",
+  // "https://ibb.co/Mf2FnXq",
+  // "https://ibb.co/dpkb1jb",
+  // "https://ibb.co/h7Yvk5C",
+  // "https://ibb.co/0tnQR7m",
+  // "https://ibb.co/HHWVV0K",
+  // "https://ibb.co/pWB3RGz",
+  // "https://ibb.co/6sPpTGC",
+  // "https://ibb.co/sRjnzHr",
+  // "https://ibb.co/8bwg7f2",
+  // "https://ibb.co/XkmWvqF",
+  // "https://ibb.co/r65gcCw",
+  // "https://ibb.co/87ggH4V",
+  // "https://ibb.co/3ChZ7s7",
+  // "https://ibb.co/DG1MPSs",
+  // "https://ibb.co/Ln0g5c7",
+  // "https://ibb.co/vvdjRb5",
+  // "https://ibb.co/cv98gfT",
+  // "https://ibb.co/xh5X143",
+  // "https://ibb.co/hftCG3D",
+  // "https://ibb.co/hdrVHY4",
+  // "https://ibb.co/MMr3rTz",
+  // "https://ibb.co/gWxdZK5"]
   return (
     <section className="pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
-       <div className="container mx-auto">
-         <div className="-mx-4 flex flex-wrap">
-           <div className="w-full px-4">
-             <div className="mx-auto mb-[60px] max-w-[510px] text-center">
-               <span className="mb-2 block text-lg font-semibold text-primary">
-                 Our Team
-               </span>
-               <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
-                 Our Awesome Instructors
-               </h2>
-               <p className="text-base text-body-color dark:text-dark-6">
-                 Get to learn from top Instructors.
-               </p>
-             </div>
-           </div>
-         </div>
+      <div className="container mx-auto">
+        <div className="-mx-4 flex flex-wrap">
+          <div className="w-full px-4">
+            <div className="mx-auto mb-[60px] max-w-[510px] text-center">
+              <span className="mb-2 block text-lg font-semibold text-primary">
+                Our Team
+              </span>
+              <h2 className="mb-3 text-3xl font-bold leading-[1.2] text-dark dark:text-white sm:text-4xl md:text-[40px]">
+                Our Awesome Instructors
+              </h2>
+              <p className="text-base text-body-color dark:text-dark-6">
+                Get to learn from top Instructors.
+              </p>
+            </div>
+          </div>
+        </div>
 
         <div className="-mx-4 flex flex-wrap justify-center">
-           <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/T1J9LD4/image-03-2.jpg"
-          />
-          <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/8P6cvVy/image-01-1.jpg"
-          />
-          <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/30tGtjP/image-04.jpg"
-          />
-          <TeamCard
-            name="Coriss Ambady"
-            profession="Web Developer"
-            imageSrc="https://i.ibb.co/yVVT0Dp/image-02-2.jpg"
-          />
+          {person.map((p) => (
+            <TeamCard
+              key={p.id}
+              name={p.Name}
+              profession={p.rank}
+              imageSrc={p.img}
+            />
+          ))}
+
+         
         </div>
       </div>
     </section>
-  )
-  
-
-}
-export default Instructors
+  );
+};
+export default Instructors;
 
 interface TeamCardProps {
   imageSrc: string;
@@ -73,7 +108,7 @@ interface TeamCardProps {
 }
 
 const TeamCard: React.FC<TeamCardProps> = ({ imageSrc, name, profession }) => {
- return (
+  return (
     <>
       <div className="w-full px-4 md:w-1/2 xl:w-1/4">
         <div className="mx-auto mb-10 w-full max-w-[370px]">

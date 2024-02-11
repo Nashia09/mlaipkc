@@ -2,17 +2,29 @@ import React, { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { TypeAnimation } from 'react-type-animation';
 
+
+
+
 const Hero2 = () => {
 
   
   const [backgroundIndex, setBackgroundIndex] = useState(0);
   const backgrounds = [
-    'url(https://images.unsplash.com/photo-1604014237800-1c9102c219da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80)',
-    'url(https://web.archive.org/web/20231026031255im_/https://mlailpkc.org.ng/static/images/slider/home1/slide1-1.jpg)',
-    'url(https://web.archive.org/web/20220705041314im_/https://mlailpkc.org.ng/static/images/slider/home1/slider4-1.png)',
+    // 'url(../assets/img2.jpg)',
+    // 'url(../assets/img1.avif)',
+    // 'url(../assets/img3.png)',
+    // "../assets/ml.jpg",
+    // "../assets/mlmed.jpg",
+    // "../assets/mlmil.jpeg",
+
+    'https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG',
+    'https://web.archive.org/web/20231026031255im_/https://mlailpkc.org.ng/static/images/slider/home1/slide1-1.jpg',
+    'https://web.archive.org/web/20231026031244im_/https://mlailpkc.org.ng/static/images/slider/home1/slide2-2.jpg'
+
+
     
     
-    // Add more background image URLs as needed
+    
   ];
 
   useEffect(() => {
@@ -29,6 +41,7 @@ const Hero2 = () => {
 
   const textRef = useRef(null);
 
+  console.log(backgrounds[backgroundIndex])
   useEffect(() => {
     // GSAP animation for the text
     gsap.from(textRef.current, {
@@ -56,21 +69,21 @@ const Hero2 = () => {
 }, [backgroundIndex]);
   return (
 
-    <section className={`relative bg-cover bg-center bg-no-repeat bg-[${backgrounds[backgroundIndex]}]`}>
-   <div className="absolute inset-0 bg-black/50"></div>
+    <section style={{backgroundImage:`url(${backgrounds[backgroundIndex]})`}} className={`relative bg-cover bg-center bg-no-repeat`}>
+   <div className="absolute inset-0  bg-black/50 t"></div>
   <div
     className="absolute inset-0 bg-white/75 sm:bg-transparent sm:from-white/95 sm:to-white/25 ltr:sm:bg-gradient-to-r rtl:sm:bg-gradient-to-l"
   ></div>
 
   <div
-    className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+    className="relative  mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
   >
 
     <div className="w-full text-center ltr:sm:text-center rtl:sm:text-right" ref={textRef}>
       <h1 className="text-3xl text-white font-extrabold sm:text-5xl w-full">
       WELCOME TO
 
-        <strong className="block font-extrabold white "> THE CENTER OF <span className="underline decoration-double decoration-blue-700">EXCELLENCE.</span>  </strong>
+        <strong className="block font-extrabold white "> THE CENTER OF EXCELLENCE.  </strong>
       </h1>
 
       

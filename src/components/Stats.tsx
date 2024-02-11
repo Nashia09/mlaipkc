@@ -112,15 +112,7 @@ export const Stats = () => {
               </dd>
             </div>
 
-            <div className="flex flex-col rounded-lg bg-blue-100 px-4 py-8 text-center">
-              <dt className="order-last text-lg font-medium text-gray-500">
-                COURSES
-              </dt>
-
-              <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
-              <CountUp end={20} duration={2}  />
-              </dd>
-            </div>
+           
           </dl>
         </div>
       </div>
