@@ -23,6 +23,8 @@ import { Partners } from "./pages/Partners";
 import { Facilities } from "./pages/Facilities";
 import CourseDetails from "./pages/CourseDetails";
 import CoursePage from "./pages/CoursesPage";
+import Card from "./components/Card";
+import Abt from "./pages/Abt";
 
 declare global {
   interface Window {
@@ -44,21 +46,19 @@ function App() {
       <Routes>
         <Route path="/">
           <Route index element={<Home />} />
-          <Route path="About" element={<About />} />
+          {/* <Route path="About" element={<About />} /> */}
           <Route path="Blog" element={<Blog />} />
           <Route path="Faq" element={<Faq />} />
           <Route path="Contact" element={<Contact />} />
-          <Route path="Courses" element={<Courses />} />
+          {/* <Route path="Courses" element={<Courses />} /> */}
           <Route path="Instructors" element={<Instructors2 />} />
           <Route path="Faci" element={<Facilitators />} />
           <Route path="Training" element={<Training />} />
           <Route path="Partners" element={<Partners />} />
           <Route path="Facilities" element={<Facilities />} />
-          <Route path="CourseDetail" element={<CourseDetails />} />
-          <Route path="CoursesPage" element={<CoursePage />} />
-
-
-          
+          <Route path="CourseDetails" element={<CourseDetails />} />
+          <Route path="CoursesPage" element={<Card />} />
+          <Route path="About"  element={<Abt />} />
         </Route>
       </Routes>
       <Footer />

@@ -1,7 +1,11 @@
 import React from 'react'
+import Banner from '../components/Banner'
 
 export const Training = () => {
   return (
-    <div>Training</div>
+    <div>
+        <Banner title={"Training"} summary={"Training"} />
+      
+    </div>
   )
 }

@@ -92,9 +92,7 @@ export const Mission = () => {
                       Our Vision
                     </h3>
                     <p className="hidden group-hover:block mt-3 text-lg text-gray-500">
-                      Pretium ac auctor quis urna orci feugiat. Vulputate tellus
-                      velit tellus orci auctor vel nulla facilisi ut. Ante nunc
-                      risus viverra vivamus.
+                    To produce qualitative peacekeepers for excellent service to humanity.
                     </p>
                   </div>
                   <div>
@@ -131,19 +129,20 @@ export const Mission = () => {
                   </div>
                 </button>
               </div>
-             
-             </div>
+            </div>
             <div className="w-full lg:w-1/2 px-4">
               <div className="px-8 py-10 mb-6 bg-white rounded-3xl shadow-lg">
                 <button className="flex group w-full items-start justify-between text-left">
                   <div className="max-w-xl pr-5">
                     <h3 className="text-xl font-semibold text-black group-hover:text-orange-900">
-                      Our Mission 
+                      Our Mission
                     </h3>
                     <p className="hidden group-hover:block mt-3 text-lg text-gray-500">
-                      Pretium ac auctor quis urna orci feugiat. Vulputate tellus
-                      velit tellus orci auctor vel nulla facilisi ut. Ante nunc
-                      risus viverra vivamus.
+                      The Mission of MLAILPKC is to deliver realistic and
+                      qualitative training packages on Peace Support Operations
+                      to potential United Nations and regional peacekeepers to
+                      prepare them for the complex and multidimensional
+                      challenges of modern Peace Support Operations.
                     </p>
                   </div>
                   <div>
@@ -180,8 +179,7 @@ export const Mission = () => {
                   </div>
                 </button>
               </div>
-              </div>
-              
+            </div>
           </div>
         </div>
       </div>

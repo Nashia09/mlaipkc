@@ -17,7 +17,7 @@ const CourseDetailsPage = () => {
               <img
                 src="https://via.placeholder.com/2000"
                 alt="Course"
-                style={{width: "350px" , height:"350px"}}
+                style={{ width: "350px", height: "350px" }}
                 className="w-full h-auto mb-4 rounded-lg shadow-md"
               />
             </div>
@@ -59,9 +59,7 @@ const CourseDetailsPage = () => {
                     <td className="font-semibold pr-4 py-2 border-r border-orange-500">
                       Course Language:
                     </td>
-                    <td className="py-2 border-r border-orange-500">
-                      English
-                    </td>
+                    <td className="py-2 border-r border-orange-500">English</td>
                   </tr>
                   <tr className="border-b border-orange-500">
                     <td className="font-semibold pr-4 py-2 border-r border-orange-500">
@@ -89,7 +87,7 @@ const CourseDetailsPage = () => {
                   </tr>
                 </tbody>
               </table>
-             
+
               <Link
                 to="#"
                 className="inline-block mt-8 bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600"
@@ -98,39 +96,123 @@ const CourseDetailsPage = () => {
               </Link>
             </div>
           </div>
-          <div className="mb-6">
-                <h2 className="text-2xl font-bold mb-2">Steps to Apply:</h2>
-                <ol className="list-decimal list-inside">
-                  <li className="mb-2">Register for an account on our website.</li>
-                  <li className="mb-2">
-                    Complete the online application form with your personal and professional details.
-                  </li>
-                  <li className="mb-2">
-                    Upload required documents, including your CV and recommendation letters.
-                  </li>
-                  <li className="mb-2">
-                    Pay the course fee securely through our payment gateway.
-                  </li>
-                  <li className="mb-2">
-                    Wait for confirmation of your enrollment.
-                  </li>
-                </ol>
-              </div>
-
-          <h2 className="text-2xl font-bold mb-4">Course Objectives</h2>
-          <ul className="list-disc list-inside">
-            <li>Objective 1</li>
-            <li>Objective 2</li>
-            <li>Objective 3</li>
-            {/* Add more objectives as needed */}
-          </ul>
         </section>
-
-        
 
         {/* Add more sections as needed */}
       </main>
-      
+      <div className="bg-white sm:px-6 p-4 justify-start items-start text-start">
+        <div className="max-w-2xl mx-auto">
+          <div>
+            <h2 className="text-4xl font-extrabold text-gray-800 mb-4">
+              Introduction
+            </h2>
+            <p className="text-gray-500 text-sm mt-4">
+              With a high spate of armed conflicts world over particularly in
+              Africa, attempts at finding a lasting solution to peace, democracy
+              and consequent development have stalled as a result of the
+              numerous conflicts which continue to plague the African continent.
+              Peacekeeping Missions and Stabilisation Operations are the key
+              instruments to deal with these inter and intra state conflicts. To
+              make these missions successful, an efficient Mission HQ with sound
+              structures and procedures as well as professional military, police
+              and civilian staff is paramount. Therefore, training of HQ
+              personnel is the leverage for successful peace operations in the
+              future. Specific knowledge and skills are the key to master all
+              future challenges in these kinds of operations. The ability of
+              civilian, police and military personnel to cooperate in an
+              integrated HQ and perform duties in current operations and in
+              operational planning in an integrated approach is the basis for
+              successful peace operations.
+            </p>
+          </div>
+          <hr className="my-10" />
+          <div className="grid gap-16">
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800">
+                COURSE DESCRIPTION
+              </h3>
+              <div className="mt-4">
+                <p className="text-gray-500 text-sm">
+                  The three-week United Nations Staff Officer Course is designed
+                  by and conducted at the KAIPTC to expose participants to
+                  relevant and current skills, expertise and best practices in
+                  the domain of staff duties. Emphasis will be placed on
+                  exploring and applying adult training methodologies relevant
+                  to key sessions. The course facilitation team will be composed
+                  of resource persons from training institutions in Africa and
+                  abroad, Ghanaian Police, Peacekeeping Practitioners, as well
+                  as academia among others.
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800">COURSE AIM</h3>
+              <div className="mt-4">
+                <p className="text-gray-500 text-sm">
+                  The aim of the UNSOC is to train military, police and civilian
+                  Headquarters (HQ) Staff within the West Africa Sub region with
+                  the ability to man/support the ECOWAS Standby Force, African
+                  Union or United Nations HQ. Staff of a Mission HQ should be
+                  trained in planning and decision-making process. The course
+                  also aims to establish and foster regional cooperation and
+                  coordination between individuals and institutions engaged in
+                  ECOWAS, AU, UN and other institutional Peacekeeping Missions
+                  (PKM).
+                </p>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800">
+                COURSE OBJECTIVES
+              </h3>
+              <div className="mt-4">
+                <ol>
+                  <li>
+                    The participants will understand the history and principles
+                    of UN Peacekeeping;
+                  </li>
+                  <li>
+                    The participants will understand the history and principles
+                    of UN Peacekeeping;
+                  </li>
+                  <li>
+                    The participants will understand the history and principles
+                    of UN Peacekeeping;
+                  </li>
+                  <li>
+                    The participants will understand the history and principles
+                    of UN Peacekeeping;
+                  </li>
+                  <li>
+                    The participants will understand the history and principles
+                    of UN Peacekeeping;
+                  </li>
+                  <li>
+                    The participants will understand the history and principles
+                    of UN Peacekeeping;
+                  </li>
+                </ol>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-gray-800">TARGET GROUP</h3>
+              <div className="mt-4">
+                <p className="text-gray-500 text-sm">
+                  Set at the operational level, the course targets a mixed group
+                  of middle and above leadership from the following: ECOWAS
+                  Standby Forces HQ Structure officials – military, police and
+                  civilians FHQ Individuals and members of ongoing peacekeeping
+                  missions; Government officials, operational level staffers and
+                  police; ECOWAS/AU/UN peacekeeping mission military personnel
+                  directly involved in operational planning and implementation
+                  of policies; Selected personnel by ECOWAS, AU, and UN Member
+                  States to be deployed in a Peacekeeping mission.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>{" "}
     </div>
   );
 };

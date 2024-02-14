@@ -1,7 +1,10 @@
-import React from 'react'
+import React from "react";
+import Banner from "../components/Banner";
 
 export const Facilities = () => {
   return (
-    <div>Facilities</div>
-  )
-}
+    <div>
+      <Banner title={"Facilities"} summary={"Our modern equipments"} />
+    </div>
+  );
+};
