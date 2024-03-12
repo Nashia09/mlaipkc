@@ -360,7 +360,6 @@ const CoursePage = () => {
       </div>
       {loading ? (
         <p className="text-lg text-gray-600">Loading...</p>
-
       ) : filteredCourses.length === 0 ? (
         <p className="text-lg text-gray-600">Oops! No course found.</p>
       ) : (
@@ -388,7 +387,7 @@ const CoursePage = () => {
                   <p>Registration Closes: {course.registrationClose}</p>
                 </div>
                 <Link
-                  to={`/CourseDetail`}
+                  to={`/CourseDetails`}
                   className=" bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 focus:outline-none"
                 >
                   Read More
@@ -404,3 +403,11 @@ const CoursePage = () => {
 };
 
 export default CoursePage;
+
+
+
+
+
+
+///
+

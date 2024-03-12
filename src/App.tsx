@@ -25,6 +25,8 @@ import CourseDetails from "./pages/CourseDetails";
 import CoursePage from "./pages/CoursesPage";
 import Card from "./components/Card";
 import Abt from "./pages/Abt";
+import Register from "./pages/Register";
+import { BlogDetails } from "./pages/BlogDetails";
 
 declare global {
   interface Window {
@@ -32,7 +34,7 @@ declare global {
   }
 }
 
-function App() {
+const App: React.FC = () => {
   // const [count, setCount] = useState(0)
   // const location = useLocation();
 
@@ -58,12 +60,15 @@ function App() {
           <Route path="Facilities" element={<Facilities />} />
           <Route path="CourseDetails" element={<CourseDetails />} />
           <Route path="CoursesPage" element={<Card />} />
-          <Route path="About"  element={<Abt />} />
+          <Route path="About" element={<Abt />} />
+          <Route path="Register" element={<Register />} />
+          <Route path="BlogDetails" element={<BlogDetails />} />
+
         </Route>
       </Routes>
       <Footer />
     </div>
   );
-}
+};
 
 export default App;

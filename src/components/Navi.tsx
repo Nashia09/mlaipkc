@@ -54,7 +54,7 @@ function Navi() {
           </a>
           <a
             className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-blue-600 text-blue-600 hover:border-blue-500 hover:text-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:border-blue-500 dark:text-blue-500 dark:hover:text-blue-400 dark:hover:border-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="/CoursesPage"
+            href="/Register"
           >
             Apply Now
           </a>
@@ -62,7 +62,7 @@ function Navi() {
       </div>
       {/* <!-- End Topbar --> */}
       <nav
-        className="max-w-[85rem]  w-full mx-auto px-4 md:px-6 lg:px-8"
+        className="max-w-[85rem]  w-full mx-auto px-4 md:px-6 lg:px-8 z-50"
         aria-label="Global"
       >
         <div className="relative md:flex md:items-center md:justify-between">
@@ -194,10 +194,10 @@ function Navi() {
                   Facilities
                 </Link>
 
-                <div className="hs-dropdown  [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]  py-3 md:py-6">
+                <div className="hs-dropdown  [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]  py-3 md:py-6 ">
                   <button
                     type="button"
-                    className="flex items-center w-full text-gray-800 hover:text-gray-600 font-medium dark:text-gray-200 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                    className="flex items-center w-full text-gray-800 hover:text-gray-600 font-medium dark:text-gray-200 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 "
                     onClick={handleDropdownToggle}
                   >
                     Resources
@@ -246,7 +246,7 @@ function Navi() {
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
                               </svg>
                               <div className="grow">
-                                <Link to="/Courses">Courses</Link>
+                                <Link to="/CoursesPage">Courses</Link>
                               </div>
                             </a>
 
@@ -276,7 +276,7 @@ function Navi() {
                                 <path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3" />
                               </svg>
                               <div className="grow">
-                                <Link to="/Courses">e-Learning</Link>
+                                <Link to="/CoursesPage">e-Learning</Link>
                               </div>
                             </a>
 
@@ -438,9 +438,9 @@ function Navi() {
                             Recent Happenings
                           </span>
 
-                          <a
+                          <Link
                             className="mt-4 group dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            href="#"
+                            to="/BlogDetails"
                           >
                             <div className="aspect-w-16 aspect-h-9">
                               <img
@@ -472,7 +472,7 @@ function Navi() {
                                 </svg>
                               </p>
                             </div>
-                          </a>
+                          </Link>
                         </div>
                       </div>
                     </div>

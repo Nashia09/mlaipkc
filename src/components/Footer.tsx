@@ -31,7 +31,7 @@ export const Footer = () => {
         <div className="mt-3 grid space-y-3">
           <p><Link className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to="/About">About us</Link></p>
           <p><Link className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to="/Blog">Blog</Link></p>
-          <p><Link className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to="/Courses">Courses</Link> <span className="inline ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">New Updates</span></p>
+          <p><Link className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to="/CoursesPage">Courses</Link> <span className="inline ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">New Updates</span></p>
           <p><Link className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to="/Faq">FAQ</Link></p>
         </div>
       </div>

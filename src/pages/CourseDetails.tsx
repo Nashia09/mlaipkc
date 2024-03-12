@@ -1,11 +1,12 @@
 // CourseDetailsPage.js
 import React from "react";
 import { Link } from "react-router-dom";
+import { Modal } from "../components/Modal";
 // import CourseImage from './course.jpg'; // Import your course image
 
 const CourseDetailsPage = () => {
   return (
-    <div className="bg-gray-500 min-h-screen">
+    <div className="bg-gray-300 min-h-screen">
       <main className="container mx-auto px-4 py-8">
         <section className="bg-white rounded-lg shadow-md p-8 mb-8">
           <h1 className="text-3xl font-bold mb-4">
@@ -88,12 +89,10 @@ const CourseDetailsPage = () => {
                 </tbody>
               </table>
 
-              <Link
-                to="#"
-                className="inline-block mt-8 bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600"
-              >
-                Apply Now
-              </Link>
+              {/* <button className="inline-block mt-8 bg-blue-500 text-white px-6 py-3 rounded-md hover:bg-blue-600">
+                How to Apply
+              </button> */}
+              <Modal />
             </div>
           </div>
         </section>

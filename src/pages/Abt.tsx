@@ -1,7 +1,37 @@
 import React from "react";
 import Banner from "../components/Banner";
 
+const TeamMember = ({ name, imageUrl }) => (
+  <div className="flex flex-col items-center">
+    <img src={imageUrl} alt={name} className="rounded-full w-32 h-32 mb-4" />
+    <h3 className="text-lg font-semibold">{name}</h3>
+  </div>
+);
+
 const Abt = () => {
+  const teamMembers = [
+    {
+      name: "ML Agwai Gen(rtd)",
+      imageUrl: "/john-doe.jpg",
+      position: "Chairman",
+    },
+    {
+      name: "OT Ethan Maj Gen(rtd)",
+      imageUrl: "/jane-smith.jpg",
+      position: "Member",
+    },
+    {
+      name: "Mrs. Halima Ahmed ECOWAS",
+      imageUrl: "/alex-johnson.jpg",
+      position: "Member",
+    },
+    {
+      name: "Ambassador Ibrahim Gambari COS To Presidency",
+      imageUrl: "/alex-johnson.jpg",
+      position: "Member",
+    },
+    // Add more team members as needed
+  ];
   return (
     <>
       <Banner title={"About Us"} summary={""} />
@@ -97,8 +127,26 @@ const Abt = () => {
               Our Mission
             </h1>
             <p className="font-bold text-base leading-6 text-gray-600 ">
-            The Mission of MLAILPKC is to deliver realistic and qualitative training packages on Peace Support Operations to potential United Nations and regional peacekeepers to prepare them for the complex and multidimensional challenges of modern Peace Support Operations.
+              The Mission of MLAILPKC is to deliver realistic and qualitative
+              training packages on Peace Support Operations to potential United
+              Nations and regional peacekeepers to prepare them for the complex
+              and multidimensional challenges of modern Peace Support
+              Operations.
             </p>
+          </div>
+        </div>
+        <div className="container mx-auto py-12">
+          <h2 className="text-3xl font-semibold text-center mb-8">
+            Board Of Trustees
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.map((member, index) => (
+              <TeamMember
+                key={index}
+                name={member.name}
+                imageUrl={member.imageUrl}
+              />
+            ))}
           </div>
         </div>
       </div>

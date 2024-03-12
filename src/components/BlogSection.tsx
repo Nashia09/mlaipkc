@@ -41,13 +41,13 @@ export const BlogSection = () => {
 
           <div className="mt-7">
             <h3 className="text-xl font-semibold text-gray-800 group-hover:text-gray-600 dark:text-gray-200">
-              Studio by Preline
+             
             </h3>
             <p className="mt-3 text-gray-800 dark:text-gray-200 hover:text-blue-500">
               Produce professional, reliable streams easily leveraging Preline's
               innovative broadcast studio
             </p>
-            <p className="mt-5 inline-flex items-center gap-x-1 text-blue-600 decoration-2 group-hover:underline font-medium">
+            <Link to={"BlogDetails"} className="mt-5 inline-flex items-center gap-x-1 text-blue-600 decoration-2 group-hover:underline font-medium">
               Read more
               <svg
                 className="flex-shrink-0 w-4 h-4"
@@ -63,7 +63,7 @@ export const BlogSection = () => {
               >
                 <path d="m9 18 6-6-6-6" />
               </svg>
-            </p>
+            </Link>
           </div>
         </a>
         {/* <!-- End Card --> */}
@@ -89,7 +89,7 @@ export const BlogSection = () => {
               Optimize your in-person experience with best-in-className
               capabilities like badge printing and lead retrieval
             </p>
-            <p className="mt-5 inline-flex items-center gap-x-1 text-blue-600 decoration-2 group-hover:underline font-medium">
+            <Link to={"BlogDetails"} className="mt-5 inline-flex items-center gap-x-1 text-blue-600 decoration-2 group-hover:underline font-medium">
               Read more
               <svg
                 className="flex-shrink-0 w-4 h-4"
@@ -105,7 +105,7 @@ export const BlogSection = () => {
               >
                 <path d="m9 18 6-6-6-6" />
               </svg>
-            </p>
+            </Link>
           </div>
         </a>
         {/* <!-- End Card --> */}

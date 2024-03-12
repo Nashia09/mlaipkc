@@ -1,11 +1,12 @@
 import React from "react";
 import Banner from "../components/Banner";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   return (
     <>
-      <Banner title={" Our Blog"} summary={"Read the Lastest happenings"} />
 
+      <Banner title={" Our Blog"} summary={"Read the Lastest happenings"} />
       <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
@@ -73,12 +74,12 @@ const BlogCard: React.FC<BlogCardProps> = ({
               </span>
             )}
             <h3>
-              <a
-                href="/#"
+              <Link
+                to="/BlogDetails"
                 className="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-2xl lg:text-xl xl:text-2xl"
               >
                 {CardTitle}
-              </a>
+              </Link>
             </h3>
             <p className="text-base text-body-color dark:text-dark-6">
               {CardDescription}

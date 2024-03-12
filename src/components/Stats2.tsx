@@ -45,6 +45,18 @@ export default function Stats2() {
               INT'L. PARTICIPANTS
             </p>
           </div>
+
+          <div
+            className="shadow-lg xl:p-6 p-4 sm:w-auto w-full bg-white sm:absolute relative z-20 sm:mt-0 mt-4 right-0 bottom-0 xl:ml-56 sm:ml-12 xl:-mt-40 sm:-mt-12 hover:scale-105
+"
+          >
+            <p className="text-3xl font-semibold text-gray-800">
+              <CountUp end={3000} duration={2} /> +
+            </p>
+            <p className="text-base leading-4 xl:mt-4 mt-2 text-gray-600">
+              POLICE
+            </p>
+          </div>
         </div>
       </div>
     </>

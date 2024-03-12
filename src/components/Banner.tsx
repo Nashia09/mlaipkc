@@ -1,10 +1,11 @@
 import React from "react";
+import ml from "../assets/hero/ml.jpg";
 
 function Banner({ title, summary }) {
   return (
-    <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10">
+    <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10 z-0">
       <img
-        src="https://web.archive.org/web/20231026031244im_/https://mlailpkc.org.ng/static/images/slider/home1/slide2-2.jpg"
+        src={ml}
         alt="Banner Image"
         className="absolute inset-0 w-full h-full object-cover"
       />
