@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useApiClient } from "../utils/api-client";
+import { useCourseRepository } from "../domain/repositories/course";
 
 const CoursesCarousel = () => {
   const courses = [
@@ -127,6 +129,10 @@ const CoursesCarousel = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [carouselWidth, setCarouselWidth] = useState<number | null>(null);
+
+  // Configure API Client & Course Repository
+  const apiClent = useApiClient();
+  const courseRepository = useCourseRepository(apiClent);
 
   useEffect(() => {
     const updateCarouselWidth = () => {
