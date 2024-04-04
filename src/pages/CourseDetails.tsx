@@ -1,18 +1,49 @@
 // CourseDetailsPage.js
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { Modal } from "../components/Modal";
+import { useApiClient } from "../utils/api-client";
+import { useCourseRepository } from "../domain/repositories/course";
+
 // import CourseImage from './course.jpg'; // Import your course image
 
 const CourseDetailsPage = () => {
+  // Configure API Client & Course Repository
+  const apiClent = useApiClient();
+  const courseRepository = useCourseRepository(apiClent);
+
+  const { id } = useParams(); // Retrieve the id parameter from the URL
+
+  // Assuming you have a function to fetch course details by id
+  // Replace this with your actual data fetching logic
+  const [courses, setCourses] = useState<Array>([]); // State to store the course details
+  const [schedule, setSchedule] = useState<Array>([]);
+  useEffect(() => {
+    // Fetch all courses from the API
+    courseRepository.listCourses().then((courses) => {
+      // Find the course with the matching id
+      // console.log(courses.find((c) => c.uid == id));
+      const selectedCourse = courses.find((c) => c.uid === id);
+
+      // If the course is found, set it in the state
+      if (selectedCourse) {
+        setCourses(selectedCourse);
+        setSchedule(selectedCourse?.schedules[0]);
+      } else {
+        // Handle case where course with the given id is not found
+        console.log(`Course with id ${id} not found`);
+      }
+    });
+  }, [id]); // Add id to the dependency array so useEffect runs when id changes
+  console.log(courses);
+  console.log(schedule);
   return (
     <div className="bg-gray-300 min-h-screen">
       <main className="container mx-auto px-4 py-8">
+        {/* {courses.map((course) => ( */}
+
         <section className="bg-white rounded-lg shadow-md p-8 mb-8">
-          <h1 className="text-3xl font-bold mb-4">
-            Political Advisor Course for Peace Support Operations in Africa
-            (POLAD24)
-          </h1>
+          <h1 className="text-3xl font-bold mb-4">{courses.name}</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <img
@@ -83,7 +114,7 @@ const CourseDetailsPage = () => {
                       Application Deadline:
                     </td>
                     <td className="py-2 border-r border-orange-500">
-                      In-person
+                      {schedule.start_date}
                     </td>
                   </tr>
                 </tbody>
@@ -131,17 +162,7 @@ const CourseDetailsPage = () => {
                 COURSE DESCRIPTION
               </h3>
               <div className="mt-4">
-                <p className="text-gray-500 text-sm">
-                  The three-week United Nations Staff Officer Course is designed
-                  by and conducted at the KAIPTC to expose participants to
-                  relevant and current skills, expertise and best practices in
-                  the domain of staff duties. Emphasis will be placed on
-                  exploring and applying adult training methodologies relevant
-                  to key sessions. The course facilitation team will be composed
-                  of resource persons from training institutions in Africa and
-                  abroad, Ghanaian Police, Peacekeeping Practitioners, as well
-                  as academia among others.
-                </p>
+                <p className="text-gray-500 text-sm">{courses.description}</p>
               </div>
             </div>
             <div>

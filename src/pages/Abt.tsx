@@ -1,5 +1,10 @@
 import React from "react";
 import Banner from "../components/Banner";
+import gm from "../assets/general-martin-luther3.jpg";
+import amb from "../assets/ambassador-ibrahim-gambari3.jpg";
+import eth from "../assets/Maj-Ethan-3.jpeg";
+import h from "../assets/Hajia-Ahmed-Jaji-4.jpeg";
+import ml from "../assets/ml.jpg";
 
 const TeamMember = ({ name, imageUrl }) => (
   <div className="flex flex-col items-center">
@@ -12,22 +17,22 @@ const Abt = () => {
   const teamMembers = [
     {
       name: "ML Agwai Gen(rtd)",
-      imageUrl: "/john-doe.jpg",
+      imageUrl: gm,
       position: "Chairman",
     },
     {
       name: "OT Ethan Maj Gen(rtd)",
-      imageUrl: "/jane-smith.jpg",
+      imageUrl: eth,
       position: "Member",
     },
     {
       name: "Mrs. Halima Ahmed ECOWAS",
-      imageUrl: "/alex-johnson.jpg",
+      imageUrl: h,
       position: "Member",
     },
     {
       name: "Ambassador Ibrahim Gambari COS To Presidency",
-      imageUrl: "/alex-johnson.jpg",
+      imageUrl: amb,
       position: "Member",
     },
     // Add more team members as needed
@@ -46,10 +51,11 @@ const Abt = () => {
               Nigerian Armed force towards keeping peace around the world.
             </p>
           </div>
+
           <div className="w-full lg:w-8/12 ">
             <img
               className="w-full h-full rounded-md shadow-lg"
-              src="https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG"
+              src={ml}
               alt="A group of People"
             />
           </div>

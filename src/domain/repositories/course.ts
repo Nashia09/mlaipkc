@@ -23,4 +23,9 @@ export const useCourseRepository = (apiClient: AxiosInstance) => {
 
     throw new Error("Could not connect to MLAILPKC API!");
   };
+
+  return {
+    listCourses,
+    findCourseByUid,
+  }
 };

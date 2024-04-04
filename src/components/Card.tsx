@@ -1,18 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Banner from "./Banner";
 import Loader from "./Loader";
-
-interface Course {
-  id: number;
-  title: string;
-  category: string;
-  categoryColor: string;
-  image: string;
-  summary: string;
-  registrationOpen: string;
-  registrationClose: string;
-}
+import { useApiClient } from "../utils/api-client";
+import { useCourseRepository } from "../domain/repositories/course";
 
 const Card: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -20,205 +12,10 @@ const Card: React.FC = () => {
     useState<string>("All Categories");
   const [loading, setLoading] = useState<boolean>(false);
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
-
-  const courses: Course[] = [
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Onsite",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Online",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Online",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Online",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Onsite",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Onsite",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Onsite",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Onsite",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Onsite",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Onsite",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Onsite",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Onsite",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Onsite",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Online",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-
-    {
-      id: 1,
-      title: "Course 1",
-      category: "Online",
-      categoryColor: "red",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 1 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-10",
-      registrationClose: "2024-02-20",
-    },
-    {
-      id: 2,
-      title: "Course 2",
-      category: "Online",
-      categoryColor: "blue",
-      image:
-        "https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG",
-      summary:
-        "Course 2 summary lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      registrationOpen: "2024-02-15",
-      registrationClose: "2024-02-25",
-    },
-  ];
+  const [courses, setCourses] = useState<Array>([]);
+  // Configure API Client & Course Repository
+  const apiClent = useApiClient();
+  const courseRepository = useCourseRepository(apiClent);
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value);
@@ -233,10 +30,20 @@ const Card: React.FC = () => {
     setShowDropdown(!showDropdown);
   };
 
+  useEffect(() => {
+    courseRepository.listCourses().then((courses) => {
+      setCourses(courses);
+      courses.map((course) =>
+        course.schedules?.map((schedule) => schedule.course)
+      );
+    });
+  }, []);
+  console.log(courses);
+
   const filteredCourses = courses.filter((course) => {
     const matchesSearch =
-      course.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      course.category.toLowerCase().includes(searchQuery.toLowerCase());
+      course.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      course.name.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesCategory =
       selectedCategory === "All Categories" ||
@@ -406,10 +213,10 @@ const Card: React.FC = () => {
                 <motion.div key={course.id} variants={cardVariants}>
                   <SingleCard
                     image={course.image}
-                    CardTitle={course.title}
+                    CardTitle={course.name}
                     titleHref="/CourseDetails"
-                    btnHref="/CourseDetails"
-                    CardDescription={course.summary}
+                    btnHref={`/CourseDetails/${course.uid}`}
+                    CardDescription={course.description}
                     Button="View Details"
                   />
                 </motion.div>
@@ -458,12 +265,12 @@ const SingleCard: React.FC<SingleCardProps> = ({
             {CardDescription}
           </p>
           {Button && (
-            <a
-              href={btnHref ? btnHref : "#"}
+            <Link
+              to={btnHref ? btnHref : "#"}
               className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
             >
               {Button}
-            </a>
+            </Link>
           )}
         </div>
       </div>

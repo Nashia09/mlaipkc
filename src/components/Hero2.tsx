@@ -10,21 +10,14 @@ import m4 from "../assets/hero/img4.jpeg";
 const Hero2 = () => {
   const [backgroundIndex, setBackgroundIndex] = useState(0);
   const backgrounds = [
-    // 'url(../assets/img2.jpg)',
-    // 'url(../assets/img1.avif)',
-    // 'url(../assets/img3.png)',
-    // "../assets/ml.jpg",
-    // "../assets/mlmed.jpg",
-    // "../assets/mlmil.jpeg",
+    
     m,
     ml,
     mlmed,
     mlmil,
     m4,
 
-    // 'https://web.archive.org/web/20220520045800im_/https://mlailpkc.org.ng/static/images/about/vission.JPG',
-    // 'https://web.archive.org/web/20231026031255im_/https://mlailpkc.org.ng/static/images/slider/home1/slide1-1.jpg',
-    // 'https://web.archive.org/web/20231026031244im_/https://mlailpkc.org.ng/static/images/slider/home1/slide2-2.jpg'
+   
   ];
 
   useEffect(() => {
@@ -39,7 +32,7 @@ const Hero2 = () => {
 
   const textRef = useRef(null);
 
-  console.log(backgrounds[backgroundIndex]);
+ 
   useEffect(() => {
     // GSAP animation for the text
     gsap.from(textRef.current, {
