@@ -8,7 +8,6 @@ function Navi() {
   const isActiveLink = (path: string) => {
     return location.pathname === path;
   };
-  
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
@@ -19,7 +18,7 @@ function Navi() {
   // const closeDropdown = () => {
   //   setIsDropdownOpen(false);
   // };
-  return (  
+  return (
     <header className="flex  flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-white border-b border-gray-200 text-sm pb-2 sm:pb-0 dark:bg-gray-800 dark:border-gray-700">
       {/* <!-- Topbar --> */}
       <div className="max-w-[85rem]  mx-auto w-full px-4 sm:px-6 lg:px-8">
@@ -45,7 +44,7 @@ function Navi() {
               <path d="M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05" />
               <circle cx="12" cy="12" r="10" />
             </svg>
-            English (US)
+            {/* English (US) */}
           </a>
           <a
             className="inline-flex justify-center items-center gap-2 font-medium text-slate-600 hover:text-slate-500 text-sm dark:text-slate-400 dark:hover:text-slate-300"
@@ -67,7 +66,7 @@ function Navi() {
         aria-label="Global"
       >
         <div className="relative md:flex md:items-center md:justify-between">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between ">
             <a
               className="flex-none  text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               href="#"
@@ -76,7 +75,7 @@ function Navi() {
               <img
                 src="https://web.archive.org/web/20231026031250im_/https://mlailpkc.org.ng/static/images/logo/MLAILPKC-Logo-3.png"
                 alt="Logo"
-                className="w-50 h-50 pb-5"
+                className="w-50 h-50 pb-5 "
               />
             </a>
             <div className="md:hidden">
