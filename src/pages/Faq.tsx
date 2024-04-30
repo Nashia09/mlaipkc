@@ -1,4 +1,3 @@
-import React, { useState, MouseEvent } from 'react';
 
 export const Faq = () => {
   return (

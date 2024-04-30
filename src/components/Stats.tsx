@@ -1,4 +1,4 @@
-import React from "react";
+
 import CountUp from "react-countup";
 
 export const Stats = () => {

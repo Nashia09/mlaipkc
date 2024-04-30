@@ -1,8 +1,13 @@
-import React from "react";
+// import React from "react";
 import PartnerCarousel from "./PartnersCarousel";
 
+export interface Partner {
+  name: string;
+  logoUrl: string;
+}
+
 export const Partners = () => {
-  const partners = [
+  const partners: Partner[] = [
     {
       name: "Nigerian Defense Academy(NDA)",
       logoUrl:

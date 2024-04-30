@@ -1,7 +1,17 @@
-import React from 'react';
 import PartnerCard from './PartnerCard'; // Import your PartnerCard component
 
-function PartnerCategory({ category, partners }) {
+interface Partner {
+  name: string;
+  logoUrl: string;
+  // Add other properties if necessary
+}
+
+interface PartnerCategoryProps {
+  category: string;
+  partners: Partner[];
+}
+
+function PartnerCategory({ category, partners }: PartnerCategoryProps) {
   return (
     <div className="partner-category mb-8">
       <h3 className="text-lg font-semibold mb-4">{category}</h3>

@@ -1,19 +1,16 @@
-import { useState, useEffect } from "react";
+import {  useEffect } from "react";
 import "./App.css";
-import { useLocation } from "react-router-dom";
 // import "./App.css";
 import "preline/preline";
 import { Routes, Route } from "react-router-dom";
 import { IStaticMethods } from "preline/preline";
 import Navi from "./components/Navi";
-import Hero from "./components/Hero";
+
 
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
-import About from "./pages/About";
 
 import { Faq } from "./pages/Faq";
-import { Courses } from "./pages/Courses";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Facilitators from "./pages/Facilitators";
@@ -22,10 +19,9 @@ import { Training } from "./pages/Training";
 import { Partners } from "./pages/Partners";
 import { Facilities } from "./pages/Facilities";
 import CourseDetails from "./pages/CourseDetails";
-import CoursePage from "./pages/CoursesPage";
 import Card from "./components/Card";
 import Abt from "./pages/Abt";
-import Register from "./pages/Register";
+// import Register from "./pages/Register";
 import { BlogDetails } from "./pages/BlogDetails";
 
 declare global {
@@ -61,7 +57,7 @@ const App: React.FC = () => {
           <Route path="CourseDetails/:id" element={<CourseDetails />} />
           <Route path="CoursesPage" element={<Card />} />
           <Route path="About" element={<Abt />} />
-          <Route path="Register" element={<Register />} />
+          {/* <Route path="Register" element={<Register />} /> */}
           <Route path="BlogDetails" element={<BlogDetails />} />
 
         </Route>

@@ -1,13 +1,23 @@
-import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+import  { useState, useRef, useEffect } from "react";
 import { useApiClient } from "../utils/api-client";
 import { useCourseRepository } from "../domain/repositories/course";
+import { CourseSchedule } from "../domain/models/course-schedule";
+interface Course {
+  uid: string;
+  code: string;
+  name: string;
+  description: string;
+  created_at: Date;
+  last_modified_at: Date;
+  // relations
+  schedules?: CourseSchedule[];
+}
 
 const CoursesCarousel = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [carouselWidth, setCarouselWidth] = useState<number | null>(null);
-  const [courses, setCourses] = useState<Array>([]);
+  const [courses, setCourses] = useState<Course[]>([]);
   // Configure API Client & Course Repository
   const apiClent = useApiClient();
   const courseRepository = useCourseRepository(apiClent);
@@ -114,8 +124,10 @@ const CoursesCarousel = () => {
               <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                 Registration Period
                 <span>
-                  {course.schedules[0]?.start_date} -{" "}
-                  {course.schedules[0]?.end_date}
+                {course.schedules?.[0]?.start_date.toString()} -{" "}
+
+
+                  {course.schedules?.[0]?.end_date.toString()}
                 </span>
               </p>
               <a

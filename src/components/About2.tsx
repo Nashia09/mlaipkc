@@ -1,5 +1,4 @@
 import Courses from "./Courses";
-import CountUp from "react-countup";
 import Stats2 from "./Stats2";
 import { useEffect } from "react";
 import gsap from "gsap";

@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Banner from "../components/Banner";
 import gm from "../assets/general-martin-luther3.jpg";
 import amb from "../assets/ambassador-ibrahim-gambari3.jpg";
@@ -6,7 +6,11 @@ import eth from "../assets/Maj-Ethan-3.jpeg";
 import h from "../assets/Hajia-Ahmed-Jaji-4.jpeg";
 import ml from "../assets/ml.jpg";
 
-const TeamMember = ({ name, imageUrl }) => (
+interface teamProps{
+  name: string;
+  imageUrl: string;
+}
+const TeamMember = ({ name, imageUrl } : teamProps ) => (
   <div className="flex flex-col items-center">
     <img src={imageUrl} alt={name} className="rounded-full w-32 h-32 mb-4" />
     <h3 className="text-lg font-semibold">{name}</h3>

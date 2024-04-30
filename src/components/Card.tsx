@@ -5,6 +5,19 @@ import Banner from "./Banner";
 import Loader from "./Loader";
 import { useApiClient } from "../utils/api-client";
 import { useCourseRepository } from "../domain/repositories/course";
+import { CourseSchedule } from "../domain/models/course-schedule";
+ 
+interface Course {
+  uid: string;
+  code: string;
+  name: string;
+  description: string;
+  created_at: Date;
+  last_modified_at: Date;
+  // relations
+  schedules?: CourseSchedule[];
+}
+
 
 const Card: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
@@ -12,7 +25,7 @@ const Card: React.FC = () => {
     useState<string>("All Categories");
   const [loading, setLoading] = useState<boolean>(false);
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
-  const [courses, setCourses] = useState<Array>([]);
+  const [courses, setCourses] = useState<Course[]>([]);
   // Configure API Client & Course Repository
   const apiClent = useApiClient();
   const courseRepository = useCourseRepository(apiClent);
@@ -46,8 +59,8 @@ const Card: React.FC = () => {
       course.name.toLowerCase().includes(searchQuery.toLowerCase());
 
     const matchesCategory =
-      selectedCategory === "All Categories" ||
-      course.category === selectedCategory;
+      selectedCategory === "All Categories" 
+      //fix course.category === selectedCategory;
 
     return matchesSearch && matchesCategory;
   });
@@ -209,10 +222,10 @@ const Card: React.FC = () => {
               initial="hidden"
               animate="visible"
             >
-              {filteredCourses.map((course) => (
-                <motion.div key={course.id} variants={cardVariants}>
+              {filteredCourses.map((course: Course) => (
+                <motion.div key={course.uid} variants={cardVariants}>
                   <SingleCard
-                    image={course.image}
+                    image="img.jpg"
                     CardTitle={course.name}
                     titleHref="/CourseDetails"
                     btnHref={`/CourseDetails/${course.uid}`}

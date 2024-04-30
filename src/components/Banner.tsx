@@ -1,7 +1,10 @@
-import React from "react";
 import ml from "../assets/hero/ml.jpg";
+interface BannerProps {
+  title: string;
+  summary: string;
+}
 
-function Banner({ title, summary }) {
+function Banner({ title, summary }: BannerProps) {
   return (
     <div className="relative font-[sans-serif] before:absolute before:w-full before:h-full before:inset-0 before:bg-black before:opacity-50 before:z-10 z-0">
       <img

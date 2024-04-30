@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import { TypeAnimation } from "react-type-animation";
 import mlmil from "../assets/hero/mlmil.jpeg";

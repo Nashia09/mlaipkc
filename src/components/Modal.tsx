@@ -1,4 +1,3 @@
-import React from "react";
 import ml from "../assets/hero/ml.jpg";
 
 export const Modal = () => {

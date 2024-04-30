@@ -1,6 +1,9 @@
-import React from "react";
+interface cardprops{
+  name: string;
+  logoUrl: string;
+}
 
-function PartnerCard({ name, logoUrl }) {
+function PartnerCard({ name, logoUrl }: cardprops) {
   return (
     <div className="partner-card bg-white rounded-lg shadow-md p-6 transition duration-300 transform hover:scale-105">
       <img

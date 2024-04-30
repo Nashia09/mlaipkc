@@ -1,5 +1,3 @@
-import React from 'react';
-import r from "../assets/SO_agada.jpeg"
 
 const Facilitators = () => {
   return (
