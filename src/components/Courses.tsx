@@ -31,7 +31,7 @@ const CoursesCarousel = () => {
     updateCarouselWidth();
     window.addEventListener("resize", updateCarouselWidth);
     courseRepository.listCourses().then((courses) => {
-      setCourses(courses);
+      setCourses(courses.data);
       courses.map((course) =>
         course.schedules?.map((schedule) => schedule.course)
       );
@@ -68,7 +68,7 @@ const CoursesCarousel = () => {
         ref={carouselRef}
         onScroll={handleScroll}
       >
-        {courses.map((course, id) => (
+        {courses?.map((course, id) => (
           // <div key={id} className="flex-none w-72 mr-4">
           //   <div className="bg-white rounded-lg shadow-md p-4">
           //     <div

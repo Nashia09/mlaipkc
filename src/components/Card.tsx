@@ -45,7 +45,7 @@ const Card: React.FC = () => {
 
   useEffect(() => {
     courseRepository.listCourses().then((courses) => {
-      setCourses(courses);
+      setCourses(courses.data);
       courses.map((course) =>
         course.schedules?.map((schedule) => schedule.course)
       );
@@ -223,6 +223,7 @@ const Card: React.FC = () => {
               animate="visible"
             >
               {filteredCourses.map((course: Course) => (
+       
                 <motion.div key={course.uid} variants={cardVariants}>
                   <SingleCard
                     image="img.jpg"
@@ -232,6 +233,7 @@ const Card: React.FC = () => {
                     CardDescription={course.description}
                     Button="View Details"
                   />
+                  
                 </motion.div>
               ))}
             </motion.div>
@@ -271,7 +273,7 @@ const SingleCard: React.FC<SingleCardProps> = ({
               href={titleHref ? titleHref : "/#"}
               className="mb-4 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
             >
-              {CardTitle}
+              {CardTitle} 
             </a>
           </h3>
           <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">

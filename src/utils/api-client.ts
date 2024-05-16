@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "http://localhost:3333/api",
+  baseURL: "https://mlailpkc-api-839a553f0085.herokuapp.com/api",
   timeout: 60000,
   headers: {
     Accept: "application/json",

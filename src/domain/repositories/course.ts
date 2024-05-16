@@ -2,7 +2,7 @@ import { AxiosInstance } from "axios";
 import { Course } from "../models/course";
 
 export const useCourseRepository = (apiClient: AxiosInstance) => {
-  const parentUrl = `/ext/courses`;
+  const parentUrl = `/courses`;
 
   const listCourses = async (): Promise<Course[]> => {
     const response = await apiClient.get<Course[]>(`${parentUrl}/list`);
