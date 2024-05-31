@@ -23,6 +23,23 @@ const CoursesCarousel = () => {
   const apiClent = useApiClient();
   const courseRepository = useCourseRepository(apiClent);
 
+  const allCourses = async () => {
+    try {
+        const response = await courseRepository.listCourses();
+        console.log('All Courses');
+        console.log(response);
+        setCourses(response['data'] );
+        console.log(courses);
+        
+
+        // toast('Success');
+    } catch (error) {
+        const apiError = error;
+        console.log('Api Error!');
+        console.log(apiError);
+        // toast('Invalid UserName or Password' + apiError);
+    }
+};
   useEffect(() => {
     const updateCarouselWidth = () => {
       if (carouselRef.current) {
@@ -31,9 +48,12 @@ const CoursesCarousel = () => {
     };
     updateCarouselWidth();
     window.addEventListener("resize", updateCarouselWidth);
-    courseRepository.listCourses().then((courses) => {
-      setCourses(courses.data);
-    });
+    // courseRepository.listCourses().then((res) => {
+    //   setCourses(res);
+     
+    // });
+
+    allCourses()
     return () => {
       window.removeEventListener("resize", updateCarouselWidth);
     };

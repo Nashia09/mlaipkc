@@ -44,8 +44,8 @@ const Card: React.FC = () => {
   };
 
   useEffect(() => {
-    courseRepository.listCourses().then((courses) => {
-      setCourses(courses.data);
+    courseRepository.listCourses().then((course) => {
+      setCourses(course);
       courses.map((course) =>
         course.schedules?.map((schedule) => schedule.course)
       );
