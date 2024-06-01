@@ -3,7 +3,7 @@ import { useApiClient } from "../utils/api-client";
 import { useCourseRepository } from "../domain/repositories/course";
 import { CourseSchedule } from "../domain/models/course-schedule";
 
-interface Course {
+type Course = {
   uid: string;
   code: string;
   name: string;
@@ -14,32 +14,36 @@ interface Course {
   schedules?: CourseSchedule[];
 }
 
+type ResponseData = {
+  data: Course[];
+}
+
 const CoursesCarousel = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [carouselWidth, setCarouselWidth] = useState<number | null>(null);
   const [courses, setCourses] = useState<Course[]>([]);
+
   // Configure API Client & Course Repository
-  const apiClent = useApiClient();
-  const courseRepository = useCourseRepository(apiClent);
+  const apiClient = useApiClient();
+  const courseRepository = useCourseRepository(apiClient);
 
   const allCourses = async () => {
     try {
-        const response = await courseRepository.listCourses();
-        console.log('All Courses');
-        console.log(response);
-        setCourses(response['data'] );
-        console.log(courses);
-        
+      const response: ResponseData = await courseRepository.listCourses();
+      console.log('Complete Response', response);
 
-        // toast('Success');
+      // Assuming response contains a data property with the courses array
+      if (response && Array.isArray(response.data)) {
+        setCourses(response.data);
+      } else {
+        console.error('Unexpected response structure:', response);
+      }
     } catch (error) {
-        const apiError = error;
-        console.log('Api Error!');
-        console.log(apiError);
-        // toast('Invalid UserName or Password' + apiError);
+      console.error('Api Error!', error);
     }
-};
+  };
+
   useEffect(() => {
     const updateCarouselWidth = () => {
       if (carouselRef.current) {
@@ -48,12 +52,9 @@ const CoursesCarousel = () => {
     };
     updateCarouselWidth();
     window.addEventListener("resize", updateCarouselWidth);
-    // courseRepository.listCourses().then((res) => {
-    //   setCourses(res);
-     
-    // });
 
-    allCourses()
+    allCourses();
+
     return () => {
       window.removeEventListener("resize", updateCarouselWidth);
     };

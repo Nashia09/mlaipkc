@@ -43,7 +43,7 @@ const CourseDetailsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <img
-                  src={course.image || "https://via.placeholder.com/2000"}
+                  src={"https://via.placeholder.com/2000"}
                   alt="Course"
                   style={{ width: "350px", height: "350px" }}
                   className="w-full h-auto mb-4 rounded-lg shadow-md"
