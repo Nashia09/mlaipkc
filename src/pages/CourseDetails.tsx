@@ -21,7 +21,7 @@ const CourseDetailsPage = () => {
     // Fetch all courses from the API
     courseRepository.listCourses().then((courses) => {
       // Find the course with the matching id
-      const selectedCourse = courses?.data.find((c) => c.uid === id);
+      const selectedCourse = courses?.find((c) => c.uid === id);
 
       // If the course is found, set it in the state
       if (selectedCourse) {

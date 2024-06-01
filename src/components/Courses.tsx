@@ -14,9 +14,6 @@ type Course = {
   schedules?: CourseSchedule[];
 }
 
-type ResponseData = {
-  data: Course[];
-}
 
 const CoursesCarousel = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -30,12 +27,12 @@ const CoursesCarousel = () => {
 
   const allCourses = async () => {
     try {
-      const response: ResponseData = await courseRepository.listCourses();
+      const response: Course[] = await courseRepository.listCourses();
       console.log('Complete Response', response);
 
       // Assuming response contains a data property with the courses array
-      if (response && Array.isArray(response.data)) {
-        setCourses(response.data);
+      if (response && Array.isArray(response)) {
+        setCourses(response);
       } else {
         console.error('Unexpected response structure:', response);
       }

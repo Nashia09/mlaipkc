@@ -6,7 +6,7 @@ import Loader from "./Loader";
 import { useApiClient } from "../utils/api-client";
 import { useCourseRepository } from "../domain/repositories/course";
 import { CourseSchedule } from "../domain/models/course-schedule";
- 
+import img2 from "../assets/img2.jpg"; 
 interface Course {
   uid: string;
   code: string;
@@ -226,7 +226,7 @@ const Card: React.FC = () => {
        
                 <motion.div key={course.uid} variants={cardVariants}>
                   <SingleCard
-                    image="img.jpg"
+                    image={img2}
                     CardTitle={course.name}
                     titleHref="/CourseDetails"
                     btnHref={`/CourseDetails/${course.uid}`}
@@ -282,7 +282,7 @@ const SingleCard: React.FC<SingleCardProps> = ({
           {Button && (
             <Link
               to={btnHref ? btnHref : "#"}
-              className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
+              className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6 bg-blue-400"
             >
               {Button}
             </Link>

@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import img from "../assets/mlmil.jpeg";
+import img2 from "../assets/ml.jpg";
+
 
 export const BlogSection = () => {
   return (
@@ -30,7 +33,7 @@ export const BlogSection = () => {
           <div className="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
             <img
               className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
-              src="https://peacekeeping.un.org/sites/default/files/styles/1200x500/public/zoungrana_1_0.jpeg?itok=4rvPdsvx"
+              src={img}
               alt="Image Description"
             />
             <span className="absolute top-0 end-0 rounded-se-xl rounded-es-xl text-xs font-medium bg-gray-800 text-white py-1.5 px-3 dark:bg-gray-900">
@@ -75,7 +78,7 @@ export const BlogSection = () => {
           <div className="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
             <img
               className="w-full h-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
-              src="https://peacekeeping.un.org/sites/default/files/styles/1200x500/public/ghana_ministerial.jpeg?itok=vm0gwP41"
+              src={img2}
               alt="Image Description"
             />
           </div>
@@ -122,7 +125,7 @@ export const BlogSection = () => {
           </div>
           <div className="pt-0 p-4 md:p-6">
             <div className="inline-flex items-center gap-2 text-sm font-medium text-white group-hover:text-white/[.7]">
-              Visit our blog
+             <Link to="/Blog">Visit our blog</Link> 
               <svg
                 className="flex-shrink-0 w-4 h-4"
                 xmlns="http://www.w3.org/2000/svg"

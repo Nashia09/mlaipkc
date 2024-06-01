@@ -37,28 +37,9 @@ export const Partners = () => {
                   logoUrl:
                     "https://www.kaiptc.org/wp-content/uploads/2017/01/Sweden.jpg ",
                 },
-                {
-                  name: "Germany",
-                  logoUrl:
-                    "https://www.kaiptc.org/wp-content/uploads/2018/08/germany-2888541_960_720-e1535534203262.png",
-                },
-                {
-                  name: "USA",
-                  logoUrl:
-                    "https://www.kaiptc.org/wp-content/uploads/2018/08/plausible-e1535535441235.png",
-                },
-                {
-                  name: "Japan",
-                  logoUrl:
-                    "https://www.kaiptc.org/wp-content/uploads/2018/06/japan-162328_960_720-e1528198174646.png",
-                },
+                
 
-                {
-                  name: "Sweden",
-                  logoUrl:
-                    "https://www.kaiptc.org/wp-content/uploads/2017/01/Sweden.jpg ",
-                },
-
+               
                 // Add more partners as needed
               ]}
             />
@@ -67,23 +48,23 @@ export const Partners = () => {
               category="Government Institutions"
               partners={[
                 {
+                  name: "Nigerian Army",
+                  logoUrl:
+                  "https://upload.wikimedia.org/wikipedia/commons/4/45/Nigerian_Army_Logo_With_Correct_Inscriptions.png",
+                },
+                
+                { name: "Nigerian Navy", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Badge_of_the_Nigerian_Navy.svg" },
+                {
+                  name: "Nigerian Airforce",
+                  logoUrl:
+                  "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Nigerian_Air_Force_emblem.svg/1200px-Nigerian_Air_Force_emblem.svg.png",
+                },
+                {
                   name: "Nigerian Defense Academy(NDA)",
                   logoUrl:
                     "https://upload.wikimedia.org/wikipedia/en/4/4b/Nigerian_Defence_Academy_logo.png",
                 },
-                {
-                  name: "Nigerian Army",
-                  logoUrl:
-                    "https://upload.wikimedia.org/wikipedia/commons/4/45/Nigerian_Army_Logo_With_Correct_Inscriptions.png",
-                },
                 
-                {
-                  name: "Nigerian Airforce",
-                  logoUrl:
-                    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Nigerian_Air_Force_emblem.svg/1200px-Nigerian_Air_Force_emblem.svg.png",
-                },
-                { name: "Nigerian Navy", logoUrl: "https://upload.wikimedia.org/wikipedia/commons/e/e7/Badge_of_the_Nigerian_Navy.svg" },
-
                 {
                   name: "KOFI ANNAN INTERNATIONAL PEACEKEEPING TRAINING CENTRE",
                   logoUrl:
@@ -141,11 +122,7 @@ export const Partners = () => {
                   logoUrl:
                     "https://www.kaiptc.org/wp-content/uploads/2017/04/IAPTC.jpg",
                 },
-                {
-                  name: "International Association of Peacekeeping Training Centres",
-                  logoUrl:
-                    "https://www.kaiptc.org/wp-content/uploads/2017/04/IAPTC.jpg",
-                },
+               
 
                 // Add more partners as needed
               ]}
