@@ -109,6 +109,7 @@ export const Mission = () => {
                     <h3 className="text-xl font-semibold text-orange-900 mb-3">
                       Our Mission
                     </h3>
+                    
                     <p className="hidden group-hover:block mt-3 text-lg text-gray-500">
                       To deliver realistic training to potential leaders and
                       peacekeepers for the multi-dimentional challenges of

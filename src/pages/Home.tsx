@@ -4,20 +4,21 @@ import { Partners } from "../components/Partners";
 import Hero2 from "../components/Hero2";
 import About2 from "../components/About2";
 import { Timeline } from "../components/Timeline";
+import { Mission } from "../components/Mission";
 
 export const Home = () => {
   return (
     <>
-      {/* <Hero /> */}
+     
       <Hero2 />
 
-      {/* <Mission /> */}
+      <Mission />
+     
       <About2 />
       <div className="flex items-center  justify-center">
         <Timeline />
       </div>
-      {/* <Courses /> */}
-      {/* <Stats /> */}
+    
       <Video />
       <BlogSection />
       <Partners />
