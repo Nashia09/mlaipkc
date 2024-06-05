@@ -6,10 +6,7 @@ import { useAdminNoticeRepository } from '../domain/repositories/notice';
 import { Link } from 'react-router-dom';
 
 const Notice: React.FC = () => {
-  const [newsItems, setNewsItems] = useState<string[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<string | null>(null);
-  const [notice, setNotice] = useState<Notice1[]>([]);
+    const [notice, setNotice] = useState<Notice1[]>([]);
   
   const apiClient = useApiClient();
   const courseRepository = useAdminNoticeRepository(apiClient);
@@ -24,7 +21,7 @@ const Notice: React.FC = () => {
       // Assuming response contains a data property with the courses array
       if (response && Array.isArray(response)) {
         setNotice(response);
-        setLoading(false)
+        
       } else {
         console.error('Unexpected response structure:', response);
       }
@@ -40,9 +37,7 @@ const Notice: React.FC = () => {
 
   
 
-  if (error) {
-    return <div>{error}</div>;
-  }
+ 
  if(!notice ){
     return <div></div>
  }

@@ -1,28 +1,22 @@
 import {  useEffect, useState } from "react";
 import "./App.css";
-// import "./App.css";
 import "preline/preline";
 import { Routes, Route } from "react-router-dom";
 import { IStaticMethods } from "preline/preline";
 import Navi from "./components/Navi";
-
-
 import { Footer } from "./components/Footer";
 import { Home } from "./pages/Home";
-
 import { Faq } from "./pages/Faq";
 import Contact from "./pages/Contact";
 import Blog from "./pages/Blog";
 import Facilitators from "./pages/Facilitators";
 import { Instructors2 } from "./pages/Instructors2";
 import Training from "./pages/Training";
-// import { Training } from "./pages/Training";
 import { Partners } from "./pages/Partners";
 import { Facilities } from "./pages/Facilities";
 import CourseDetails from "./pages/CourseDetails";
 import Card from "./components/Card";
 import Abt from "./pages/Abt";
-// import Register from "./pages/Register";
 import { BlogDetails } from "./pages/BlogDetails";
 import Notice from "./components/Notice";
 import { Notice1 } from "./domain/models/notice";
@@ -36,7 +30,6 @@ declare global {
 }
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(true)
   // const location = useLocation();
 
   const [notice, setNotice] = useState<Notice1[]>([]);
@@ -54,7 +47,6 @@ const App: React.FC = () => {
       // Assuming response contains a data property with the courses array
       if (response && Array.isArray(response)) {
         setNotice(response);
-        setLoading(false)
       } else {
         console.error('Unexpected response structure:', response);
       }

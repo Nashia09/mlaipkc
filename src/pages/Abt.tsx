@@ -1,15 +1,9 @@
-// // import React from "react";
-// import Banner from "../components/Banner";
 import gm from "../assets/general-martin-luther3.jpg";
 import amb from "../assets/ambassador-ibrahim-gambari3.jpg";
 import eth from "../assets/Maj-Ethan-3.jpeg";
 import h from "../assets/Hajia-Ahmed-Jaji-4.jpeg";
 import ml from "../assets/ml.jpg";
-
-import sol2 from "../assets/sol2.jpeg";
-
 import sol3 from "../assets/hero/mlmil.jpeg";
-
 import React from "react";
 import Banner from "../components/Banner";
 
