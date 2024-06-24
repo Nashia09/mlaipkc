@@ -19,12 +19,12 @@ function Navi() {
   //   setIsDropdownOpen(false);
   // };
   return (
-    <header className="flex  flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-white border-b border-gray-200 text-sm pb-2 sm:pb-0 dark:bg-gray-800 dark:border-gray-700">
+    <header className="flex  flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-white border-b border-gray-200 text-sm pb-2 sm:pb-0 ">
       {/* <!-- Topbar --> */}
       <div className="max-w-[85rem]  mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-end gap-x-5 w-full py-2 sm:pt-2 sm:pb-0">
           <a
-            className="inline-flex justify-center items-center gap-2 font-medium text-slate-600 hover:text-slate-500 text-sm dark:text-slate-400 dark:hover:text-slate-300"
+            className="inline-flex justify-center items-center gap-2 font-medium text-slate-600 hover:text-slate-500 text-sm "
             href="#"
           >
             <svg
@@ -47,14 +47,14 @@ function Navi() {
             {/* English (US) */}
           </a>
           <a
-            className="inline-flex justify-center items-center gap-2 font-medium text-slate-600 hover:text-slate-500 text-sm dark:text-slate-400 dark:hover:text-slate-300"
-            href="#"
+            className="inline-flex justify-center items-center gap-2 font-medium text-slate-600 hover:text-slate-500 text-sm "
+            href="https://mlailpkc-portal-b18f8b72e63e.herokuapp.com/auth/login"
           >
             Sign In
           </a>
           <a
-            className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-blue-600 text-blue-600 hover:border-blue-500 hover:text-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:border-blue-500 dark:text-blue-500 dark:hover:text-blue-400 dark:hover:border-blue-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-            href="/Register"
+            className="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-blue-600 text-blue-600 hover:border-blue-500 hover:text-blue-500 disabled:opacity-50 disabled:pointer-events-none "
+            href="https://mlailpkc-portal-b18f8b72e63e.herokuapp.com/auth/register"
           >
             Apply Now
           </a>
@@ -68,7 +68,7 @@ function Navi() {
         <div className="relative md:flex md:items-center md:justify-between">
           <div className="flex items-center justify-between ">
             <a
-              className="flex-none  text-xl font-semibold dark:text-white dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+              className="flex-none  text-xl font-semibold "
               href="#"
               aria-label="Brand"
             >
@@ -81,7 +81,7 @@ function Navi() {
             <div className="md:hidden">
               <button
                 type="button"
-                className="hs-collapse-toggle flex justify-center items-center w-9 h-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                className="hs-collapse-toggle flex justify-center items-center w-9 h-9 text-sm font-semibold rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none "
                 data-hs-collapse="#navbar-collapse-with-animation"
                 aria-controls="navbar-collapse-with-animation"
                 aria-label="Toggle navigation"
@@ -127,15 +127,15 @@ function Navi() {
               isDropdownOpen ? "hs-dropdown-open:opacity-100 opacity-100" : ""
             }`}
           >
-            <div className="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 dark:[&::-webkit-scrollbar-track]:bg-slate-700 dark:[&::-webkit-scrollbar-thumb]:bg-slate-500">
-              <div className="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:ps-7 md:divide-y-0 md:divide-solid dark:divide-gray-700">
+            <div className="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300 ">
+              <div className="flex flex-col gap-x-0 mt-5 divide-y divide-dashed divide-gray-200 md:flex-row md:items-center md:justify-end md:gap-x-7 md:mt-0 md:ps-7 md:divide-y-0 md:divide-solid ">
                 <Link
                   to="/"
                   className={`font-medium ${
                     isActiveLink("/")
-                      ? "text-blue-600 dark:text-blue-500"
+                      ? "text-blue-600 "
                       : "text-gray-800 hover:text-gray-600"
-                  } py-3 md:py-6 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                  } py-3 md:py-6  `}
                 >
                   Home
                 </Link>
@@ -144,10 +144,12 @@ function Navi() {
                   to="/About"
                   className={`font-medium ${
                     isActiveLink("/About")
-                      ? "text-blue-600 dark:text-blue-500"
+                      ? "text-blue-600 "
                       : "text-gray-800 hover:text-gray-600"
-                  } py-3 md:py-6 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                  } py-3 md:py-6 
+                  `}
                 >
+
                   About Us
                 </Link>
 
@@ -155,9 +157,9 @@ function Navi() {
                   to="/Training"
                   className={`font-medium ${
                     isActiveLink("/Training")
-                      ? "text-blue-600 dark:text-blue-500"
+                      ? "text-blue-600 "
                       : "text-gray-800 hover:text-gray-600"
-                  } py-3 md:py-6 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                  } py-3 md:py-6 `}
                 >
                   Training
                 </Link>
@@ -165,9 +167,9 @@ function Navi() {
                   to="/CoursesPage"
                   className={`font-medium ${
                     isActiveLink("/Courses")
-                      ? "text-blue-600 dark:text-blue-500"
+                      ? "text-blue-600 "
                       : "text-gray-800 hover:text-gray-600"
-                  } py-3 md:py-6 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                  } py-3 md:py-6 `}
                 >
                   Courses
                 </Link>
@@ -176,9 +178,9 @@ function Navi() {
                   to="/Partners"
                   className={`font-medium ${
                     isActiveLink("/Partners")
-                      ? "text-blue-600 dark:text-blue-500"
+                      ? "text-blue-600 "
                       : "text-gray-800 hover:text-gray-600"
-                  } py-3 md:py-6 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                  } py-3 md:py-6 `}
                 >
                   Our Partners
                 </Link>
@@ -187,9 +189,9 @@ function Navi() {
                   to="/Facilities"
                   className={`font-medium ${
                     isActiveLink("/Facilities")
-                      ? "text-blue-600  dark:text-blue-500"
+                      ? "text-blue-600  "
                       : "text-gray-800 hover:text-gray-600"
-                  } py-3 md:py-6 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                  } py-3 md:py-6 `}
                 >
                   Facilities
                 </Link>
@@ -197,7 +199,7 @@ function Navi() {
                 <div className="hs-dropdown  [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover]  py-3 md:py-6 ">
                   <button
                     type="button"
-                    className="flex items-center w-full text-gray-800 hover:text-gray-600 font-medium dark:text-gray-200 dark:hover:text-gray-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600 "
+                    className="flex items-center w-full text-gray-800 hover:text-gray-600 font-medium "
                     onClick={handleDropdownToggle}
                   >
                     Resources
@@ -217,17 +219,17 @@ function Navi() {
                     </svg>
                   </button>
 
-                  <div className="hs-dropdown-menu z-50 transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-[705px] lg:w-[750px] hidden  top-full end-0 overflow-hidden bg-white md:shadow-2xl rounded-lg dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
+                  <div className="hs-dropdown-menu z-50 transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-[705px] lg:w-[750px] hidden  top-full end-0 overflow-hidden bg-white md:shadow-2xl rounded-lg  before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
                     <div className="grid grid-cols-2 md:grid-cols-10">
                       <div className="md:col-span-3">
                         <div className="flex flex-col py-6 px-3 md:px-6">
                           <div className="space-y-4">
-                            <span className="mb-2 text-xs font-semibold uppercase text-gray-800 dark:text-gray-200">
+                            <span className="mb-2 text-xs font-semibold uppercase text-gray-800">
                               Training
                             </span>
 
                             <a
-                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 "
                               href="#"
                             >
                               <svg
@@ -251,7 +253,7 @@ function Navi() {
                             </a>
 
                             <a
-                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 "
                               href="#"
                             >
                               <svg
@@ -283,7 +285,7 @@ function Navi() {
                             </a>
 
                             <a
-                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 "
                               href="#"
                             >
                               <svg
@@ -310,7 +312,7 @@ function Navi() {
                             </a>
 
                             <a
-                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 "
                               href="#"
                             >
                               <svg
@@ -342,7 +344,7 @@ function Navi() {
                             </a>
 
                             <a
-                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 "
                               href="#"
                             >
                               <svg
@@ -370,12 +372,12 @@ function Navi() {
                       <div className="md:col-span-3">
                         <div className="flex flex-col py-6 px-3 md:px-6">
                           <div className="space-y-4">
-                            <span className="mb-2 text-xs font-semibold uppercase text-gray-800 dark:text-gray-200">
+                            <span className="mb-2 text-xs font-semibold uppercase text-gray-800 ">
                               Partners
                             </span>
 
                             <a
-                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 "
                               href="#"
                             >
                               <svg
@@ -401,12 +403,12 @@ function Navi() {
                           </div>
 
                           <div className="mt-7 space-y-4">
-                            <span className="mb-2 text-xs font-semibold uppercase text-gray-800 dark:text-gray-200">
+                            <span className="mb-2 text-xs font-semibold uppercase text-gray-800 ">
                               Support
                             </span>
 
                             <a
-                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                              className="flex gap-x-4 text-gray-800 hover:text-blue-600 "
                               href="#"
                             >
                               <svg
@@ -435,13 +437,13 @@ function Navi() {
                       </div>
 
                       <div className="col-span-full md:col-span-4">
-                        <div className="flex flex-col bg-gray-50 p-6 dark:bg-gray-700">
-                          <span className="text-xs font-semibold uppercase text-gray-800 dark:text-gray-200">
+                        <div className="flex flex-col bg-gray-50 p-6 ">
+                          <span className="text-xs font-semibold uppercase text-gray-800 ">
                             Recent Happenings
                           </span>
 
                           <Link
-                            className="mt-4 group dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                            className="mt-4 group "
                             to="/BlogDetails"
                           >
                             <div className="aspect-w-16 aspect-h-9">
@@ -452,11 +454,11 @@ function Navi() {
                               />
                             </div>
                             <div className="mt-2">
-                              <p className="text-gray-800 dark:text-gray-200">
+                              <p className="text-gray-800 ">
                                 Advertisement For Articles And Advertisement For
                                 Publication In The Peacekeeper Magazine .
                               </p>
-                              <p className="mt-3 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-400 dark:hover:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-slate-600">
+                              <p className="mt-3 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium ">
                                 <Link to="/Blog">View more</Link>
                                 <svg
                                   className="flex-shrink-0 w-4 h-4 transition ease-in-out group-hover:translate-x-1"
@@ -485,18 +487,13 @@ function Navi() {
                   to="/Blog"
                   className={`font-medium ${
                     isActiveLink("/Blog")
-                      ? "text-blue-600 dark:text-blue-500"
+                      ? "text-blue-600 "
                       : "text-gray-800 hover:text-gray-600"
-                  } py-3 md:py-6 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600`}
+                  } py-3 md:py-6 `}
                 >
                   News
                 </Link>
-                {/* 
-            <div className="pt-3 md:pt-0">
-              <a className="py-2.5 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                Apply Now
-              </a>
-            </div> */}
+           
               </div>
             </div>
           </div>
