@@ -40,7 +40,7 @@ const AboutUs: React.FC = () => {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900">About Us</h1>
             <p className="mt-4 text-lg text-gray-600">
-              WELCOME TO MLAILPKC The Centre is commitmened towards the <br />
+              WELCOME TO MLAILPKC . <br/>The Centre is committed towards the <br />
               training of Armed forces and civilians alike towards keeping peace
               around the world.
             </p>

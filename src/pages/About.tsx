@@ -17,9 +17,9 @@ const About = () => {
                   <h1 className="mt-2 text-3xl font-black text-gray-700 md:text-5xl dark:text-gray-300">
                     About Us
                   </h1>
-                </div>
+                </div> 
                 <p className="px-4 mb-10 text-base leading-7 text-gray-500 dark:text-gray-400">
-                  WELCOME TO MLAILPKC The Centre evloved from the commitment of
+                  WELCOME TO MLAILPKC The Centre evolved from the commitment of
                   the Nigerian Armed force towards keeping peace around the
                   world.
                 </p>

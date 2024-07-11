@@ -6,18 +6,16 @@ function Navi() {
 
   // Function to determine if a link is active
   const isActiveLink = (path: string) => {
-    return location.pathname === path;
+    return location.pathname === path; 
   };
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-  const handleDropdownToggle = () => {
+  const handleDropdownToggle = () => { 
     setIsDropdownOpen(!isDropdownOpen);
   };
 
-  // const closeDropdown = () => {
-  //   setIsDropdownOpen(false);
-  // };
+
   return (
     <header className="flex  flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-white border-b border-gray-200 text-sm pb-2 sm:pb-0 ">
       {/* <!-- Topbar --> */}
@@ -68,14 +66,14 @@ function Navi() {
         <div className="relative md:flex md:items-center md:justify-between">
           <div className="flex items-center justify-between ">
             <a
-              className="flex-none  text-xl font-semibold "
+              className="flex-none  text-xl font-semibold"
               href="#"
               aria-label="Brand"
             >
               <img
                 src="https://web.archive.org/web/20231026031250im_/https://mlailpkc.org.ng/static/images/logo/MLAILPKC-Logo-3.png"
                 alt="Logo"
-                className="w-50 h-50 pb-5 "
+                className="w-50 h-50 pb-5"
               />
             </a>
             <div className="md:hidden">
@@ -149,7 +147,6 @@ function Navi() {
                   } py-3 md:py-6 
                   `}
                 >
-
                   About Us
                 </Link>
 
@@ -442,10 +439,7 @@ function Navi() {
                             Recent Happenings
                           </span>
 
-                          <Link
-                            className="mt-4 group "
-                            to="/BlogDetails"
-                          >
+                          <Link className="mt-4 group " to="/BlogDetails">
                             <div className="aspect-w-16 aspect-h-9">
                               <img
                                 className="w-full h-40 object-cover rounded-lg"
@@ -493,7 +487,6 @@ function Navi() {
                 >
                   News
                 </Link>
-           
               </div>
             </div>
           </div>
