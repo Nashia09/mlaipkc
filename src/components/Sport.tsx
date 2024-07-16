@@ -7,8 +7,6 @@ import med from "../assets/mlmed.jpg";
 const SportCenter = () => {
   const sectionRef = useRef(null);
 
-  
-
 const images = [
     { src: med, description: 'State-of-the-art equipment' },
     { src: med, description: 'Experienced healthcare professionals' },
@@ -18,6 +16,7 @@ const images = [
   useEffect(() => {
     gsap.fromTo(sectionRef.current, { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1 });
   }, []);
+  
 
   return (
     <section ref={sectionRef} className="bg-white p-6 rounded-lg shadow-lg">
