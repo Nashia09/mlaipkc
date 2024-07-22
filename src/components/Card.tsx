@@ -6,7 +6,9 @@ import Loader from "./Loader";
 import { useApiClient } from "../utils/api-client";
 import { useCourseRepository } from "../domain/repositories/course";
 import { CourseSchedule } from "../domain/models/course-schedule";
-import img2 from "../assets/img2.jpg"; 
+import img2 from "../assets/mlmed.jpg"; 
+
+
 interface Course {
   uid: string;
   code: string;

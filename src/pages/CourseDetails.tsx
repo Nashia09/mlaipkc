@@ -5,6 +5,7 @@ import { useApiClient } from "../utils/api-client";
 import { useCourseRepository } from "../domain/repositories/course";
 import { Course } from "../domain/models/course";
 import { CourseSchedule } from "../domain/models/course-schedule";
+import img2 from "../assets/mlmed.jpg"; 
 
 const CourseDetailsPage = () => {
   // Configure API Client & Course Repository
@@ -43,7 +44,7 @@ const CourseDetailsPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <img
-                  src={"https://via.placeholder.com/2000"}
+                  src={img2 }
                   alt="Course"
                   style={{ width: "350px", height: "350px" }}
                   className="w-full h-auto mb-4 rounded-lg shadow-md"
@@ -121,7 +122,7 @@ const CourseDetailsPage = () => {
           </section>
         )}
 
-        <div className="bg-white sm:px-6 p-4 text-start">
+        {/* <div className="bg-white sm:px-6 p-4 text-start">
           <div className="max-w-2xl mx-auto">
             <div>
               <h2 className="text-4xl font-extrabold text-gray-800 mb-4">Introduction</h2>
@@ -194,7 +195,7 @@ const CourseDetailsPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
     </div>
   );
