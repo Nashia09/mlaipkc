@@ -25,7 +25,7 @@ const AboutUs: React.FC = () => {
           position: "Member",
         },
         {
-          name: "Ambassador Ibrahim Gambari COS To Presidency",
+          name: "Ambassador Ibrahim Gambari",
           imageUrl: amb,
           position: "Member",
         },

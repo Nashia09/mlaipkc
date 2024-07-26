@@ -359,7 +359,7 @@ function Navi() {
                                 <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                               </svg>
                               <div className="grow">
-                                <Link to="/">Portal</Link>
+                                <Link to="https://mlailpkc-portal-b18f8b72e63e.herokuapp.com/auth/login">Portal</Link>
                               </div>
                             </a>
                           </div>
