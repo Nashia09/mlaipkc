@@ -54,7 +54,6 @@ export const BlogDetails = () => {
     return <div>No blog found</div>;
   }
 
-  const sanitizedContent = blog ? DOMPurify.sanitize(blog.content) : '';
 
   const shareUrl = window.location.href;
   const title = blog.title;

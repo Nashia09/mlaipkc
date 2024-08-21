@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import img from "../assets/mlmil.jpeg";
-import img2 from "../assets/ml.jpg";
 import { useBlogRepository } from "../domain/repositories/blog";
 import { BlogPost } from "../domain/models/blog";
 import { useApiClient } from "../utils/api-client";

@@ -91,7 +91,6 @@ import Loader from "../components/Loader";
 
   const BlogCard: React.FC<BlogCardProps> = ({
     image,
-    date,
     CardTitle,
     CardDescription,
     slug,
